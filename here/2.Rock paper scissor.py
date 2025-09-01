@@ -1,24 +1,24 @@
 #Rock,Paper,Scissor game
 import random
 
-option=("stone","paper","scissor")
+option=("rock","paper","scissor")
 running=True
-player_score=0
-computer_score=0
+player_score=0 #if the player wins the score will be incremented by 1
+computer_score=0 #if the system wins the score will be incremented by 1
 
 while running:
-    computer=random.choice(option)
+    computer=random.choice(option) #for selecting random value from the given choices
     player=None 
     
     while player not in option:
-        player=input("Enter ur option (Stone, Paper, Scissor):")
+        player=input("Enter ur option (rock, Paper, Scissor):")
     print(f"\nPlayer = {player}")
     print(f"Computer = {computer}")
     
-    if player=="scissor" and computer=="paper" or player=="stone" and computer=="scissor" or player=="paper" and computer=="stone":
+    if player=="scissor" and computer=="paper" or player=="rock" and computer=="scissor" or player=="paper" and computer=="rock": # Winning possibilities for the player
         player_score+=1
     
-    if player=="paper" and computer=="scissor" or player=="scissor" and computer=="stone" or player=="stone" and computer=="paper":
+    if player=="paper" and computer=="scissor" or player=="scissor" and computer=="rock" or player=="rock" and computer=="paper": # Winning possibilities for the system
         computer_score+=1    
    
     if player==computer:
