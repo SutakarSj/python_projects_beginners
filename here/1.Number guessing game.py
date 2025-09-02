@@ -1,12 +1,12 @@
 #number guessing game
 import random
 
-random_value = random.randint(1, 50)
+random_value = random.randint(1, 50) #I am setting the range from 1 to 50
 count=0
-while (count != 5):
+while (count != 5): #Five chances are provided: 0, 1, 2, 3, 4
     user_input=int(input("\nENTER NUMBER:"))
     
-    if (user_input == random_value):
+    if (user_input == random_value): #Player Wins
         print("    $$$ WINNER $$$")
         break
        
@@ -21,7 +21,7 @@ while (count != 5):
     else:
        print("    INVALIDE VALUE")
         
-if (count==5 and user_input!=random_value):
+if (count==5 and user_input!=random_value): #Player loss
     print("\n    ---YOU LOSS---")
     
 print("\ncomputer value:",random_value)
