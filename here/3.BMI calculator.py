@@ -1,9 +1,9 @@
 #BMI calculator 
-def calculate_bmi(weight,height):
+def calculate_bmi(weight,height): #BMI-Calculation formula
     bmi = weight / height**2
     return bmi
 
-def bmi_category(bmi):
+def bmi_category(bmi): #BMI-based result outcomes
     if bmi<=18:
         return "Under Weight"
     elif 18.5<=bmi<=24.9:
@@ -13,17 +13,17 @@ def bmi_category(bmi):
     else:
         return "Obese"
 
-def body_fat_measure(bmi,age,choice,weight):
-    men = (1.20 * bmi)+((0.23 * age)-16.2)
-    women = (1.20 * bmi)+((0.23 * age)-5.4)
+def body_fat_measure(bmi,age,choice,weight): 
+    men = (1.20 * bmi)+((0.23 * age)-16.2) #Calculation formula for males
+    women = (1.20 * bmi)+((0.23 * age)-5.4) #calculation formula for females
     
-    if choice.lower()=='m':
+    if choice.lower()=='m': #Applicable to users who choose “m”
         value=men/100
         grams=weight*1000
         male=(grams*value)
         return int(male/1000)
     
-    if choice.lower()=='f':
+    if choice.lower()=='f': #Applicable to users who choose “f”
         value=women/100
         grams=weight*1000
         female=(grams*value)
